@@ -15,15 +15,19 @@ The heart of the app is the user's news feed, which will include the top news st
 ## Wireframe
 
 Welcome screen
+
 <img src="images/welcome-screen.JPG">
 
 After logging in, the user selects preferred news sources from a menu of options
+
 <img src="images/news-sources.JPG">
 
 The user has an individual profile page
+
 <img src="images/user-profile.JPG">
 
 The user's news feed is the main feature of the app
+
 <img src="images/news-feed.JPG">
 
 ## Phases of Completion
