@@ -2,7 +2,15 @@
 
 ## What is 'My News Bubble'?
 
-[TO BE ADDED]
+'My News Bubble' is an app in which users can register and create a unqiue profile of their favorite news sources.
+
+When a user logs in, the app will list over a dozen major news sources to choose from. The user simply has to click an 'add' button to add the news source to that users 'bubble'.
+
+The user can always go back to the user's 'bubble' (profile) and remove a news source later.
+
+The heart of the app is the user's news feed, which will include the top news stories from the user's selected favorite news sources.
+
+[FOR MORE INFO, SEE PROPOSAL.MD]
 
 ## Technical Discussion
 

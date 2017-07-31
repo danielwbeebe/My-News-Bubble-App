@@ -30,6 +30,28 @@ The user's news feed is the main feature of the app
 
 <img src="images/news-feed.JPG">
 
+## Database
+
+The app will require a database 'news_bubble' with tables called: 
+
+* 'users-table' with the following columns:
+    * id SERIAL PRIMARY KEY,
+    * username VARCHAR UNIQUE NOT NULL,
+    * email VARCHAR UNIQUE NOT NULL,
+    * password_digest TEXT NOT NULL
+
+* 'news-table' with the following columns: 
+    * id SERIAL PRIMARY KEY,
+    * news-source VARCHAR,
+    * userid INTEGER
+
+The news-table will be seeded initially with Google News as news-source.
+
+## Use of API Key
+
+I plan to use an API Key from newsapi.org to retrieve the following fields for news articles: author, title, description, url, urlToImage, and publishedAt.
+
+
 ## Phases of Completion
 
 * Phase -4: Create file structure and detailed outline of the logic of the app
@@ -41,6 +63,6 @@ The user's news feed is the main feature of the app
 
 ## Resources
 
-I will use the API key from: https://newsapi.org/
+To retrieve news articles from the user's chosen sources, I will use an API key from: https://newsapi.org/
 
 
