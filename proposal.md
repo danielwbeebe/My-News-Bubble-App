@@ -47,10 +47,15 @@ The app will require a database 'news_bubble' with tables called:
 
 The news-table will be seeded initially with Google News as news-source.
 
-## Use of API Key
+## Use of API Key to 'GET' news articles
 
-I plan to use an API Key from newsapi.org to retrieve the following fields for news articles: author, title, description, url, urlToImage, and publishedAt.
-
+For each news article, I plan to use an API Key from newsapi.org to retrieve the following fields:
+* author, 
+* title, 
+* description, 
+* url, 
+* urlToImage, and 
+* publishedAt.
 
 ## Phases of Completion
 
