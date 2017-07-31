@@ -12,7 +12,7 @@ The user can always go back to the user's 'bubble' (profile) and remove a news s
 
 The heart of the app is the user's news feed, which will include the top news stories from the user's selected favorite news sources.
 
-## Wireframe
+## Wireframes
 
 Welcome screen
 
@@ -59,12 +59,14 @@ For each news article, I plan to use an API Key from newsapi.org to retrieve the
 
 ## Phases of Completion
 
-* Phase -4: Create file structure and detailed outline of the logic of the app
-* Phase -3: Set up database for user verification and user profiles
-* Phase -2: Set up views for each page of the app
-* Phase -1: Work on CSS syling of app
-* Phase 0: Complete working news app
-* Phase 1: Deploy app to Heroku
+* Phase -5: Create file folders and basic code for app (GOAL: Monday, 7/31)
+* Phase -4: Set up database with tables (GOAL: Tuesday)
+* Phase -3: Set up views (GOAL: Tuesday)
+* Phase -2: Set up user verification (GOAL: Wednesday)
+* Phase -1: Work on CSS styling of app (GOAL: Thursday)
+* Phase 0: Complete working news app (GOAL: Thursday)
+* Phase 1: Deploy app to Heroku (GOAL: Friday)
+* Phase 2: Make final edits and deploy (Goal: Sunday, 8/6)
 
 ## Resources
 
