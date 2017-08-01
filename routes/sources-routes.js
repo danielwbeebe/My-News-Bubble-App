@@ -8,18 +8,12 @@ const sourcesController = require('../controllers/sources-controller');
 sourcesRoutes.get('/', authHelpers.loginRequired, sourcesController.index);
 sourcesRoutes.post('/', authHelpers.loginRequired, sourcesController.create);
 
-// sources-index
-sourcesRoutes.get('/sources-index', authHelpers.loginRequired, sourcesController.index);
-sourcesRoutes.post('/sources-index', authHelpers.loginRequired, sourcesController.create);
+// route to add view
+sourcesRoutes.get('/add', authHelpers.loginRequired, sourcesController.add);
 
-// sources-add to allow editing - ADDED TO TRY TO NAVIGATE TO EDIT PAGE
-sourcesRoutes.get('/sources-add', authHelpers.loginRequired, sourcesController.create);
-
-// sourcesRoutes.get('/sources-edit', authHelpers.loginRequired, sourcesController.edit);
-
-
+// routes for specific items - WILL DECIDE IF NEEDED
 sourcesRoutes.get('/:id', authHelpers.loginRequired, sourcesController.index);
-sourcesRoutes.get('/:id/sources-edit', authHelpers.loginRequired, sourcesController.edit);
+sourcesRoutes.get('/:id/edit', authHelpers.loginRequired, sourcesController.edit);
 sourcesRoutes.put('/:id', authHelpers.loginRequired, sourcesController.update);
 sourcesRoutes.delete('/:id', authHelpers.loginRequired, sourcesController.delete);
 
