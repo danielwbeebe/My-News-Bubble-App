@@ -61,8 +61,9 @@ sourcesController.change = (req, res) => {
 
 // create
 sourcesController.create = (req, res) => {
+  console.log(req);
   Source.create({
-    source: req.body.source,
+    source: req.body.name,
     user_id: req.user.id,
   }).then(source => {
     console.log(source);

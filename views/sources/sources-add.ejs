@@ -5,13 +5,12 @@
 <h1>Build Your Bubble</h1>
 <h2>Click to add any of the news sources below</h2>
 
-<form>
-  <input type="button" name='Associated Press' value="Associate Press">
-  <input type="button" name='BBC News' value="BBC News">
-  <input type="button" name='Bloomberg' value="Bloomberg">
-  <input type="button" name='ESPN' value="ESPN">
-  <input type="button" name='MTV News' value="MTV News">
-  <input type="button" name='Wired' value="Wired">
+<form method='POST' action='/sources'>
+  <input type="submit" name='associated-press' value="associated-press">
+  <input type="submit" name='bbc-news' value="bbc-news">
+  <input type="submit" name='bloomberg' value="bloomberg">
+  <input type="submit" name='espn' value="espn">
+  <input type="submit" name='mtv-news' value="mtv-news">
 </form>
 
 <% include ../partials/end %>
