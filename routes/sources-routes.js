@@ -15,7 +15,7 @@ sourcesRoutes.get('/new', authHelpers.loginRequired, (req, res) => {
   });
 });
 
-sourcesRoutes.get('/:id', authHelpers.loginRequired, sourcesController.show);
+sourcesRoutes.get('/:id', authHelpers.loginRequired, sourcesController.index);
 sourcesRoutes.get('/:id/edit', authHelpers.loginRequired, sourcesController.edit);
 sourcesRoutes.put('/:id', authHelpers.loginRequired, sourcesController.update);
 sourcesRoutes.delete('/:id', authHelpers.loginRequired, sourcesController.delete);
