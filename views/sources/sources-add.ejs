@@ -1,16 +1,16 @@
-<!-- page to add news sources -->
+<!-- page to add news sources to user's bubble news feed -->
 
 <% include ../partials/boilerplate %>
 
 <h1>Build Your Bubble</h1>
 <h2>Click to add any of the news sources below</h2>
 
-<form method='POST' action='/sources'>
-  <input type="submit" name='associated-press' value="associated-press">
-  <input type="submit" name='bbc-news' value="bbc-news">
-  <input type="submit" name='bloomberg' value="bloomberg">
-  <input type="submit" name='espn' value="espn">
-  <input type="submit" name='mtv-news' value="mtv-news">
+<form class="news-buttons" method='POST' action='/sources'>
+  <input id="news-button" type="submit" name='associated-press' value="associated-press">
+  <input id="news-button" type="submit" name='bbc-news' value="bbc-news">
+  <input id="news-button" type="submit" name='bloomberg' value="bloomberg">
+  <input id="news-button" type="submit" name='espn' value="espn">
+  <input id="news-button" type="submit" name='mtv-news' value="mtv-news">
 </form>
 
 <% include ../partials/end %>

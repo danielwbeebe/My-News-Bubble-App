@@ -36,6 +36,20 @@ body {
   border-radius:15px;
 }
 
+#news-button {
+  background-color:#fff;
+  border:none;
+  color:#000;
+  padding:10px 10px 10px 10px;
+  margin:0 20px 0 20px;
+  text-align: center;
+  text-decoration:none;
+  display:inline-block;
+  font-size:15px;
+  border:2px solid;
+  border-radius:15px;
+}
+
 main {
   margin-top: 20px;
   display: flex;
