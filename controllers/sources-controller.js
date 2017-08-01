@@ -35,7 +35,7 @@ sourcesController.add = (req, res) => {
 sourcesController.create = (req, res) => {
   console.log(req);
   Source.create({
-    source: req.body.name,
+    source: req.body.newsSource,
     user_id: req.user.id,
   }).then(source => {
     console.log(source);
