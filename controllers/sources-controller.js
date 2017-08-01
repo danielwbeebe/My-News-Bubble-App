@@ -17,21 +17,7 @@ sourcesController.index = (req, res) => {
     });
 };
 
-// EDIT CONTROLLER
-sourcesController.edit = (req, res) => {
-
-  Source.findById(req.params.id)
-    .then(source => {
-      res.render('sources/sources-edit', {
-        source: source,
-      })
-    }).catch(err => {
-    console.log(err);
-    res.status(500).json({ err });
-  });
-}
-
-// GO TO ADD PAGE
+// controller that brings user to the add view
 sourcesController.add = (req, res) => {
 
   Source.findById(req.params.id)
@@ -45,21 +31,7 @@ sourcesController.add = (req, res) => {
   });
 }
 
-// GO TO EDIT PAGE
-sourcesController.change = (req, res) => {
-
-  Source.findById(req.params.id)
-    .then(source => {
-      res.render('sources/sources-edit', {
-        source: source,
-      })
-    }).catch(err => {
-    console.log(err);
-    res.status(500).json({ err });
-  });
-}
-
-// create
+// controller to create new row in table
 sourcesController.create = (req, res) => {
   console.log(req);
   Source.create({
@@ -74,7 +46,36 @@ sourcesController.create = (req, res) => {
   });
 };
 
-// update
+// EDIT CONTROLLER
+sourcesController.edit = (req, res) => {
+
+  Source.findById(req.params.id)
+    .then(source => {
+      res.render('sources/sources-edit', {
+        source: source,
+      })
+    }).catch(err => {
+    console.log(err);
+    res.status(500).json({ err });
+  });
+}
+
+
+// GO TO EDIT PAGE - CONSIDER WHETHER NEEDED
+sourcesController.change = (req, res) => {
+
+  Source.findById(req.params.id)
+    .then(source => {
+      res.render('sources/sources-edit', {
+        source: source,
+      })
+    }).catch(err => {
+    console.log(err);
+    res.status(500).json({ err });
+  });
+}
+
+// update - CONSIDER DELETING
 sourcesController.update = (req, res) => {
   Source.update({
     source: req.body.source,
