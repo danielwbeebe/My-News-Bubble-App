@@ -6,4 +6,12 @@
 
 <!-- WORK IN PROGRESS - add container for articles from news source  -->
 
+  <div class="news-container">
+    <% for (let source of data) { %>
+      <div class="news-articles">
+        <h2><%= source.source %></h2>
+      </div>
+    <% } %>
+  </div>
+
 <% include ../partials/end %>
