@@ -1,0 +1,9 @@
+<% include ../partials/boilerplate %>
+<% data.forEach(source => { %>
+  <h3><%= source.source %></h3>
+
+  <a href='/sources/<%= source.id %>'>Link</a>
+<% }) %>
+
+<script src='/src/main.js'></script>
+<% include ../partials/end %>

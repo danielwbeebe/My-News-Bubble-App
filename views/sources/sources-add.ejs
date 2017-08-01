@@ -1,0 +1,8 @@
+<% include ../partials/boilerplate %>
+
+<form method='POST' action='/sources/<%= todo.id %>?_method=PUT'>
+  <input type='text' name='source' value='<%= source.source %>' />
+  <input type='submit' value='Update it!' />
+</form>
+
+<% include ../partials/end %>
