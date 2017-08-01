@@ -33,6 +33,8 @@ sourcesController.create = (req, res) => {
 
 // edit
 sourcesController.edit = (req, res) => {
+  // console.log('wtf mate?')
+  // res.render('sources/sources-edit', {})
   Source.findById(req.params.id)
     .then(source => {
       res.render('sources/sources-edit', {
