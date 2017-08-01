@@ -60,13 +60,11 @@ For each news article, I plan to use an API Key from newsapi.org to retrieve the
 ## Phases of Completion
 
 * Phase -5: Create file folders and basic code for app (GOAL: Monday, 7/31)
-* Phase -4: Set up database with tables (GOAL: Tuesday)
-* Phase -3: Set up views AND use API Key to retrieve articles (GOAL: Tuesday)
-* Phase -2: Set up user verification (GOAL: Wednesday)
-* Phase -1: Work on CSS styling of app (GOAL: Thursday)
-* Phase 0: Complete working news app (GOAL: Thursday)
-* Phase 1: Deploy app to Heroku (GOAL: Friday)
-* Phase 2: Make final edits and deploy (Goal: Sunday, 8/6)
+* Phase -4: Set up user verification, set up database with tables and views (GOAL: Tuesday)
+* Phase -3: Use API Key to retrieve articles (GOAL: Wednesday)
+* Phase -2: Work on CSS styling of app (GOAL: Thursday)
+* Phase -1: Complete working news app and deply on Heroku (GOAL: Friday)
+* Phase 0: Make final edits and deploy (Goal: Sunday, 8/6)
 
 ## Resources
 

@@ -8,10 +8,10 @@ const sourcesController = require('../controllers/sources-controller');
 sourcesRoutes.get('/', authHelpers.loginRequired, sourcesController.index);
 sourcesRoutes.post('/', authHelpers.loginRequired, sourcesController.create);
 
-// route to add view
+// route to go to the add view
 sourcesRoutes.get('/add', authHelpers.loginRequired, sourcesController.add);
 
-// routes for specific items - CHECK IF NEEDED
+// routes for specific items - CHECK IF NEEDED - NOT SURE YET
 sourcesRoutes.get('/:id', authHelpers.loginRequired, sourcesController.index);
 sourcesRoutes.get('/:id/edit', authHelpers.loginRequired, sourcesController.edit);
 sourcesRoutes.put('/:id', authHelpers.loginRequired, sourcesController.update);

@@ -4,10 +4,14 @@
 
 <h1>Here's Your Bubble - This is the Index</h1>
 
-<!-- <% data.forEach(source => { %>
-  <h3><%= source.source %></h3>
-
-  <a href='/sources/<%= source.id %>'>Source</a>
-<% }) %> -->
+<!-- WORK IN PROGRESS - container for articles from news source  -->
+  <div class="news-container">
+    <% for (let source of data) { %>
+      <div class="news-articles">
+        <h2><%= sources.source %></h2>
+        <h3>Category: <%= todo.category %></h3>
+      </div>
+    <% } %>
+  </div>
 
 <% include ../partials/end %>
