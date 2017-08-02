@@ -60,21 +60,6 @@ sourcesController.edit = (req, res) => {
   });
 }
 
-
-// GO TO EDIT PAGE - CONSIDER WHETHER NEEDED
-sourcesController.change = (req, res) => {
-
-  Source.findById(req.params.id)
-    .then(source => {
-      res.render('sources/sources-edit', {
-        source: source,
-      })
-    }).catch(err => {
-    console.log(err);
-    res.status(500).json({ err });
-  });
-}
-
 // update - CONSIDER DELETING
 sourcesController.update = (req, res) => {
   Source.update({
