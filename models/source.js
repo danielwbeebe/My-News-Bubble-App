@@ -22,7 +22,6 @@ Source.create = (source) => {
   `, [source.source, source.user_id]);
 };
 
-
 // find by id
 Source.findById = (id) => {
   return db.oneOrNone(`
@@ -31,17 +30,6 @@ Source.findById = (id) => {
   `, [id]);
 };
 
-
-// update
-Source.update = (source, id) => {
-  return db.one(`
-    UPDATE sources SET
-    title = $1,
-    user_id = $2
-    WHERE id = $3
-    RETURNING *
-  `, [source.source, source.user_id, id]);
-};
 
 // destroy
 Source.destroy = (id) => {
