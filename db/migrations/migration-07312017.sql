@@ -12,5 +12,9 @@ CREATE TABLE IF NOT EXISTS sources
 (
   id SERIAL PRIMARY KEY,
   source VARCHAR(255),
+  title TEXT,
+  description TEXT,
+  url TEXT,
+  urlToImage TEXT,
   user_id INT REFERENCES users(id)
 );

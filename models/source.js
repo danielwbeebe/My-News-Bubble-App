@@ -16,10 +16,10 @@ Source.findAll = (id) => {
 Source.create = (source) => {
   return db.one(`
     INSERT INTO sources
-    (source, user_id)
-    VALUES ($1, $2)
+    (source, title, description, url, urlToImage, user_id)
+    VALUES ($1, $2, $3, $4, $5, $6)
     RETURNING *
-  `, [source.source, source.user_id]);
+  `, [source.source, source.title, source.description, source.url, source.urlToImage, source.user_id]);
 };
 
 // find by id

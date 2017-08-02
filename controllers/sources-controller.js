@@ -1,5 +1,6 @@
 // require models/source
 const Source = require('../models/source');
+require('isomorphic-fetch');
 
 // defining sources controller as object
 const sourcesController = {};
@@ -33,11 +34,16 @@ sourcesController.add = (req, res) => {
 
 // controller to create new row in table
 sourcesController.create = (req, res) => {
-  console.log(req);
-  Source.create({
+
+  // PULLING NEWS
+    Source.create({
     source: req.body.newsSource,
-    user_id: req.user.id,
-  }).then(source => {
+    title: res.locals.title,
+    description: res.locals.description,
+    url: res.locals.url,
+    urlToImage: res.locals.urlToImage,
+    user_id: req.user.id
+  }, console.log(res.locals.urlToImage)).then(source => {
     console.log(source);
     res.redirect('/sources/');
   }).catch(err => {
@@ -60,7 +66,7 @@ sourcesController.edit = (req, res) => {
   });
 }
 
-// update - CONSIDER DELETING
+// update
 sourcesController.update = (req, res) => {
   Source.update({
     source: req.body.source,

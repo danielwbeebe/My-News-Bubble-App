@@ -4,9 +4,11 @@ const sourcesRoutes = express.Router();
 const authHelpers = require('../services/auth/auth-helpers');
 const sourcesController = require('../controllers/sources-controller');
 
+const newsHelpers = require ('../services/news/news-helpers');
+
 // main root
 sourcesRoutes.get('/', authHelpers.loginRequired, sourcesController.index);
-sourcesRoutes.post('/', authHelpers.loginRequired, sourcesController.create);
+sourcesRoutes.post('/', authHelpers.loginRequired, newsHelpers.getNewsData, sourcesController.create);
 
 // route to go to the add view
 sourcesRoutes.get('/add', authHelpers.loginRequired, sourcesController.add);

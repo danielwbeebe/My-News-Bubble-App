@@ -36,6 +36,10 @@ body {
   border-radius:15px;
 }
 
+.nav-button:hover {
+  color: red;
+}
+
 #news-button {
   background-color:#fff;
   border:none;
@@ -48,6 +52,10 @@ body {
   font-size:15px;
   border:2px solid;
   border-radius:15px;
+}
+
+#news-button:hover {
+  color: red;
 }
 
 main {

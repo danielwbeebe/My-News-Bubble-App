@@ -1,3 +1,4 @@
+require('dotenv').config();
 // Importing Express.js from dependencies, requiring morgan, path, body-parser, method-override
 const express = require('express');
 const logger = require('morgan');
@@ -13,7 +14,7 @@ const passport = require('passport');
 // Initializing the 'To-Do' App
 const app = express();
 
-require('dotenv').config();
+
 
 // Middlewares
 app.use(logger('dev'));

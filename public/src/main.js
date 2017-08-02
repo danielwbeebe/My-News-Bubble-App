@@ -3,20 +3,21 @@ $(function() {
   console.log('script.js loaded!')
 
   // function for getting the weather data
-  function getNews() {
-    console.log('getting data....');
+  // function getNews() {
+  //   console.log("string");
 
-    // worked with Jason on proper http address format to pull the data
-    $.ajax({
-    url: `https://newsapi.org/v1/articles?source=bloomberg&sortBy=top&apiKey=336c5527739c4eb398067073d69ca075`,
-    method: 'GET',
-    success: function(data){
-      console.log(data);
-      getData(data);
-      }
-    })
-  }
+  //   // pull the data
+  //   $.ajax({
+  //   url: `https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=336c5527739c4eb398067073d69ca075`,
+  //   method: 'GET',
+  //   success: function(data){
+  //     console.log(data);
+  //     getData(data);
+  //     }
+  //   })
+  // };
 
+  // function to get news article and related data
   function getData(data) {
     let title = data.articles[0].title;
       console.log(title);
@@ -35,7 +36,6 @@ $(function() {
 
     }
 
-  getNews();
+  // getNews();
 
 })
-
