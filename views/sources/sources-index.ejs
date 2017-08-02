@@ -9,12 +9,12 @@
   <div class="news-container">
     <% for (let source of data) { %>
       <div class="news-articles">
-        <h2><%= source.source %></h2>
+        <h2>Source: <%= source.source %></h2>
 
-          <div class = "article" id="title">title</div>
-          <div class = "article" id="description">description</div>
-          <div class = "article" id="url">url</div>
-          <div class = "article" id="urlToImage">image</div>
+          <div class="article" id="title"></div><br>
+          <div class="article" id="description"></div><br>
+          <div class="article" id="url"></div><br>
+          <div class="article" id="urlToImage"></div>
 
         <form method='POST' action='/sources/<%= source.id %>?_method=DELETE'>
           <input type='submit' value='DELETE' />

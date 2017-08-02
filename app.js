@@ -58,8 +58,6 @@ const authRoutes = require('./routes/auth-routes');
 app.use('/auth', authRoutes);
 const userRoutes = require('./routes/user-routes');
 app.use('/user', userRoutes);
-const getnewsRoutes = require('./routes/getnews-routes');
-app.use('/getnews', getnewsRoutes);
 
 // Error handler
 app.use('*', (req, res) => {
