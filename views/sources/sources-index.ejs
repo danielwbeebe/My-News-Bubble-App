@@ -10,11 +10,18 @@
     <% for (let source of data) { %>
       <div class="news-articles">
         <h2><%= source.source %></h2>
+
+          <div class = "article" id="title">title</div>
+          <div class = "article" id="description">description</div>
+          <div class = "article" id="url">url</div>
+          <div class = "article" id="urlToImage">image</div>
+
         <form method='POST' action='/sources/<%= source.id %>?_method=DELETE'>
           <input type='submit' value='DELETE' />
         </form>
       </div>
     <% } %>
   </div>
+
 
 <% include ../partials/end %>
