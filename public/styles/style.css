@@ -1,7 +1,7 @@
 body {
   display: flex;
   min-height: 100vh;
-  line-height: 1.4em;
+  line-height: 1.3em;
   flex-direction: column;
   font-size: 16px;
 }
@@ -17,7 +17,6 @@ body {
   background-color: black;
   background-blend-mode: multiply;
   color: #0DFF73;
-  font-size: 40px;
   font-weight: 900;
   min-width: 500px;
 }
@@ -26,7 +25,7 @@ body {
   background-color:#fff;
   border:none;
   color: black;
-  padding:10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
   margin:0 20px 0 20px;
   text-align: center;
   text-decoration:none;
@@ -84,8 +83,8 @@ footer {
 }
 
 h1 {
-  font-size: 30px;
-  line-height: 1.7em;
+  font-size: 50px;
+  line-height: 1.2em;
 }
 
 h2 {
