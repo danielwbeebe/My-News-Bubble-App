@@ -13,8 +13,8 @@
 
           <div class="article" id="title"><%= source.title %></div><br>
           <div class="article" id="description"><%= source.description %></div><br>
-          <div class="article" id="url"><%= source.url %></div><br>
-          <div class="article" id="urlToImage"><%= source.url %></div>
+          <div class="article" id="url"><a href="<%= source.url %>">Read the whole article</a></div><br>
+          <div class="article" id="urlToImage"><img src="<%= source.urltoimage %>"></div>
 
         <form method='POST' action='/sources/<%= source.id %>?_method=DELETE'>
           <input type='submit' value='DELETE' />
