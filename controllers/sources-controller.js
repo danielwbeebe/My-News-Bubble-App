@@ -66,19 +66,6 @@ sourcesController.edit = (req, res) => {
   });
 }
 
-// update
-sourcesController.update = (req, res) => {
-  Source.update({
-    source: req.body.source,
-    user_id: req.user.id,
-  }, req.params.id).then(source => {
-    res.redirect('/sources');
-  }).catch(err => {
-    console.log(err);
-    res.status(500).json({ err });
-  });
-}
-
 // delete
 sourcesController.delete = (req, res) => {
   Source.destroy(req.params.id)
