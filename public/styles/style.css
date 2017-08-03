@@ -187,3 +187,22 @@ img {
   max-width: 400px;
   height: auto;
 }
+
+@media (max-width: 700px) {
+  .app-header {
+    min-width: 375px;
+  }
+
+  .news-articles {
+    min-width: 375px;
+  }
+
+  #description {
+  width: 360px;
+  }
+
+  img {
+  max-width: 360px;
+  height: auto;
+  }
+}
