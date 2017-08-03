@@ -4,7 +4,7 @@
 
 <h1>Here's Today's Bubble</h1>
 
-<!-- WORK IN PROGRESS - add container for articles from news source  -->
+<!-- container for articles from news source  -->
 
   <div class="news-container">
     <% for (let source of data) { %>
@@ -12,9 +12,9 @@
         <h2>Source: <%= source.source %></h2>
 
           <div class="article" id="title"><%= source.title %></div><br>
+          <div class="article" id="urlToImage"><img src="<%= source.urltoimage %>"></div>
           <div class="article" id="description"><%= source.description %></div><br>
           <div class="article" id="url"><a href="<%= source.url %>">Read the whole article</a></div><br>
-          <div class="article" id="urlToImage"><img src="<%= source.urltoimage %>"></div>
 
         <form method='POST' action='/sources/<%= source.id %>?_method=DELETE'>
           <input type='submit' value='DELETE' />

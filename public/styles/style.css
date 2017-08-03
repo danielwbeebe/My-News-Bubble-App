@@ -14,11 +14,15 @@ body {
   height: 150px;
   background-size: cover;
   background-position: center;
-  background-color: black;
+  background-color: #F6F6F6;
   background-blend-mode: multiply;
-  color: #0DFF73;
+  font-family: Mallory, sans-serif;
+  color: #2B2B2B;
   font-weight: 900;
   min-width: 500px;
+  border-style: solid;
+  border-bottom-color: #DE1B1B;
+  border-bottom-width: 5px;
 }
 
 .nav-button {
@@ -26,7 +30,7 @@ body {
   border:none;
   color: black;
   padding: 10px 10px 10px 10px;
-  margin:0 20px 0 20px;
+  margin: 0 10px 0 10px;
   text-align: center;
   text-decoration:none;
   display:inline-block;
@@ -36,9 +40,15 @@ body {
 }
 
 .nav-button:hover {
-  color: #0DFF73;
+  color: #DE1B1B;
   text-decoration: underline;
-  text-decoration-color: #0DFF73;
+  text-decoration-color: #DE1B1B;
+}
+
+.news-buttons {
+  align-items: center;
+  justify-content: center;
+  margin: 20px 25% 0 25%;
 }
 
 #news-button {
@@ -56,23 +66,25 @@ body {
 }
 
 #news-button:hover {
-  color: #0DFF73;
+  color: #DE1B1B;
   text-decoration: underline;
-  text-decoration-color: #0DFF73;
+  text-decoration-color: #DE1B1B;
 }
 
 main {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   flex: 1;
   text-align: center;
+  background-color: #2B2B2B;
+  color: white;
 }
 
 footer {
   padding: 20px;
   box-sizing: border-box;
   background-color: black;
+  font-family: Mallory, sans-serif;
   color: white;
   font-size: 14px;
   letter-spacing: .08em;
@@ -80,6 +92,9 @@ footer {
   bottom: 0px;
   width: 100%;
   vertical-align: text-middle;
+  border-style: solid;
+  border-top-color: #DE1B1B;
+  border-top-width: 5px;
 }
 
 h1 {
@@ -95,6 +110,14 @@ h2 {
 p, a {
   font-size: 18px;
   line-height: 1.4em;
+  color: white;
+}
+
+.news-articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #title {
@@ -103,6 +126,8 @@ p, a {
 
 #description {
   font-size: 20px;
+  width: 600px;
+  text-align: justify;
 }
 
 img {
