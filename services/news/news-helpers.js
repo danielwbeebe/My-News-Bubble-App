@@ -7,7 +7,7 @@ const API_KEY = process.env.API_KEY;
 // Thanks and credit to Ryan for input on helpers file
 
 function getNewsData(req, res, next) {
-  // PULLING NEWS
+  // Fetch request using API
   let newsSource = req.body.newsSource;
   fetch(`https://newsapi.org/v1/articles?source=${newsSource}&sortBy=top&apiKey=${API_KEY}`)
   .then(fetchRes => fetchRes.json())
