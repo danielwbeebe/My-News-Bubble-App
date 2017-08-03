@@ -17,7 +17,7 @@
           <div class="article" id="url"><a href="<%= source.url %>">Read the whole article</a></div><br>
 
         <form method='POST' action='/sources/<%= source.id %>?_method=DELETE'>
-          <input type='submit' value='DELETE' />
+          <input id="remove-button" type='submit' value='Done Reading - Remove' />
         </form>
       </div>
     <% } %>
