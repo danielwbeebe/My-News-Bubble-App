@@ -30,7 +30,6 @@ Source.findById = (id) => {
   `, [id]);
 };
 
-
 // destroy
 Source.destroy = (id) => {
   return db.none(`

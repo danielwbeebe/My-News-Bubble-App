@@ -5,7 +5,7 @@ require('isomorphic-fetch');
 // defining sources controller as object
 const sourcesController = {};
 
-// GO TO INDEX PAGE
+// index
 sourcesController.index = (req, res) => {
   Source.findAll(req.user.id)
     .then(sources => {
@@ -35,7 +35,7 @@ sourcesController.add = (req, res) => {
 // controller to create new row in table
 sourcesController.create = (req, res) => {
 
-  // PULLING NEWS
+  // getting news
     Source.create({
     source: req.body.newsSource,
     title: res.locals.title,
@@ -52,7 +52,7 @@ sourcesController.create = (req, res) => {
   });
 };
 
-// EDIT CONTROLLER
+// edit
 sourcesController.edit = (req, res) => {
 
   Source.findById(req.params.id)
