@@ -11,10 +11,10 @@
       <div class="news-articles">
         <h2>Source: <%= source.source %></h2>
 
-          <div class="article" id="title"></div><br>
-          <div class="article" id="description"></div><br>
-          <div class="article" id="url"></div><br>
-          <div class="article" id="urlToImage"></div>
+          <div class="article" id="title"><%= source.title %></div><br>
+          <div class="article" id="description"><%= source.description %></div><br>
+          <div class="article" id="url"><%= source.url %></div><br>
+          <div class="article" id="urlToImage"><%= source.url %></div>
 
         <form method='POST' action='/sources/<%= source.id %>?_method=DELETE'>
           <input type='submit' value='DELETE' />
