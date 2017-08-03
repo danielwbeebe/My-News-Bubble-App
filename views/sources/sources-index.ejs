@@ -6,7 +6,14 @@
 
 <!-- container for articles from news source  -->
 
-  <div class="news-container">
+  <div class="sources-list">
+    <h3>Sources in my bubble...</h3><br>
+    <% for (let source of data) { %>
+       <%= source.source %><br>
+    <% } %>
+  <hr>
+  </div>
+
     <% for (let source of data) { %>
 
       <div class="news-articles">

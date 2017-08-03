@@ -45,7 +45,7 @@ sourcesController.create = (req, res) => {
     user_id: req.user.id
   }, console.log(res.locals.urlToImage)).then(source => {
     console.log(source);
-    res.redirect('/sources/');
+    res.redirect('/sources/sources-add');
   }).catch(err => {
     console.log(err);
     res.status(500).json({ err });

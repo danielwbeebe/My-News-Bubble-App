@@ -10,10 +10,10 @@ const newsHelpers = require ('../services/news/news-helpers');
 sourcesRoutes.get('/', authHelpers.loginRequired, sourcesController.index);
 sourcesRoutes.post('/', authHelpers.loginRequired, newsHelpers.getNewsData, sourcesController.create);
 
-// route to go to the add view
+// route for add view
 sourcesRoutes.get('/add', authHelpers.loginRequired, sourcesController.add);
 
-// routes for specific items - CHECK IF EACH STILL NEEDED
+// routes for specific items
 sourcesRoutes.get('/:id', authHelpers.loginRequired, sourcesController.index);
 sourcesRoutes.delete('/:id', authHelpers.loginRequired, sourcesController.delete);
 
