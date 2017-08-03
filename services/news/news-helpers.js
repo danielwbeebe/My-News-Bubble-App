@@ -3,7 +3,7 @@ require('dotenv').config();
 
 const API_KEY = process.env.API_KEY;
 
-// Thanks and credit to Phil for helping me understand and utilize this function
+// Thanks and credit to Phil for input on this function
 // Thanks and credit to Ryan for input on helpers file
 
 function getNewsData(req, res, next) {

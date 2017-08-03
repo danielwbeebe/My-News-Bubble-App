@@ -1,21 +1,5 @@
 // entire code is a function
-$(function() {
-  console.log('script.js loaded!')
-
-  // function for getting the weather data
-  // function getNews() {
-  //   console.log("string");
-
-  //   // pull the data
-  //   $.ajax({
-  //   url: `https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=336c5527739c4eb398067073d69ca075`,
-  //   method: 'GET',
-  //   success: function(data){
-  //     console.log(data);
-  //     getData(data);
-  //     }
-  //   })
-  // };
+console.log('script.js loaded!');
 
   // function to get news article and related data
   function getData(data) {
@@ -34,8 +18,6 @@ $(function() {
     document.getElementById('url').innerHTML = `<a href="${url}">link to article</a>`;
     document.getElementById('urlToImage').innerHTML = `<img src="${urlToImage}">`;
 
-    }
+    };
 
-  // getNews();
-
-})
+getData();
