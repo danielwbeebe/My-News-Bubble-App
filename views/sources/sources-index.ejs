@@ -2,14 +2,14 @@
 
 <% include ../partials/boilerplate %>
 
-<h1>Here's Today's Bubble</h1>
+<h2>Your News Bubble</h2>
 
 <!-- container for articles from news source  -->
 
   <div class="news-container">
     <% for (let source of data) { %>
       <div class="news-articles">
-        <h2>Source: <%= source.source %></h2>
+        <h3>Source: <%= source.source %></h3>
 
           <div class="article" id="title"><%= source.title %></div><br>
           <div class="article" id="urlToImage"><img src="<%= source.urltoimage %>"></div>
