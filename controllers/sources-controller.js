@@ -52,20 +52,6 @@ sourcesController.create = (req, res) => {
   });
 };
 
-// edit
-sourcesController.edit = (req, res) => {
-
-  Source.findById(req.params.id)
-    .then(source => {
-      res.render('sources/sources-edit', {
-        source: source,
-      })
-    }).catch(err => {
-    console.log(err);
-    res.status(500).json({ err });
-  });
-}
-
 // delete
 sourcesController.delete = (req, res) => {
   Source.destroy(req.params.id)

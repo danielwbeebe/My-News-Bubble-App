@@ -15,7 +15,6 @@ sourcesRoutes.get('/add', authHelpers.loginRequired, sourcesController.add);
 
 // routes for specific items - CHECK IF EACH NEEDED
 sourcesRoutes.get('/:id', authHelpers.loginRequired, sourcesController.index);
-sourcesRoutes.get('/:id/edit', authHelpers.loginRequired, sourcesController.edit);
 sourcesRoutes.delete('/:id', authHelpers.loginRequired, sourcesController.delete);
 
 
