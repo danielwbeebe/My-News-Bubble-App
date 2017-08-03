@@ -7,7 +7,7 @@
 <!-- container for articles from news source  -->
 
   <div class="sources-list">
-    <h3>Sources in my bubble...</h3><br>
+    <h3>Sources in your bubble...</h3><br>
     <% for (let source of data) { %>
        <%= source.source %><br>
     <% } %>
@@ -17,16 +17,17 @@
     <% for (let source of data) { %>
 
       <div class="news-articles">
-        <h3>Source: <%= source.source %></h3>
 
+          <h3><%= source.source %></h3>
           <div class="article" id="title"><%= source.title %></div><br>
           <div class="article" id="urlToImage"><img src="<%= source.urltoimage %>"></div>
           <div class="article" id="description"><%= source.description %></div><br>
           <div class="article" id="url"><a href="<%= source.url %>">Read the whole article</a></div><br>
 
-        <form method='POST' action='/sources/<%= source.id %>?_method=DELETE'>
+          <form method='POST' action='/sources/<%= source.id %>?_method=DELETE'>
           <input id="remove-button" type='submit' value='Done Reading - Remove' />
-        </form>
+          </form>
+
       </div>
 
     <% } %>
