@@ -9,14 +9,6 @@
   <div class="news-container">
     <% for (let source of data) { %>
 
-      <% if (source.title === null) { %>
-
-        <div class="news-articles">
-          <h3>Your news bubble is currently empty.<br>Click the 'Update Bubble' button above!</h3>
-        </div>
-
-      <% } else { %>
-
       <div class="news-articles">
         <h3>Source: <%= source.source %></h3>
 
@@ -29,8 +21,6 @@
           <input id="remove-button" type='submit' value='Done Reading - Remove' />
         </form>
       </div>
-
-      <% } %>
 
     <% } %>
 

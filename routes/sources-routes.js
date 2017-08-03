@@ -13,10 +13,9 @@ sourcesRoutes.post('/', authHelpers.loginRequired, newsHelpers.getNewsData, sour
 // route to go to the add view
 sourcesRoutes.get('/add', authHelpers.loginRequired, sourcesController.add);
 
-// routes for specific items - CHECK IF EACH NEEDED
+// routes for specific items - CHECK IF EACH STILL NEEDED
 sourcesRoutes.get('/:id', authHelpers.loginRequired, sourcesController.index);
 sourcesRoutes.delete('/:id', authHelpers.loginRequired, sourcesController.delete);
-
 
 // export module
 module.exports = sourcesRoutes;
