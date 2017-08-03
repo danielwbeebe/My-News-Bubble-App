@@ -41,8 +41,6 @@ body {
 
 .nav-button:hover {
   color: #DE1B1B;
-  text-decoration: underline;
-  text-decoration-color: #DE1B1B;
 }
 
 .welcome {
@@ -75,8 +73,6 @@ body {
 
 #news-button:hover {
   color: #DE1B1B;
-  text-decoration: underline;
-  text-decoration-color: #DE1B1B;
 }
 
 #remove-button {
