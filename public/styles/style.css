@@ -71,7 +71,7 @@ body {
   color: black;
 }
 
-#news-button:hover {
+.news-button:hover {
   color: #DE1B1B;
 }
 
@@ -184,7 +184,7 @@ hr {
 }
 
 img {
-  max-width: 400px;
+  max-width: 450px;
   height: auto;
 }
 
