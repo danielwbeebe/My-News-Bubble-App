@@ -21,7 +21,7 @@ body {
   font-weight: 900;
   min-width: 500px;
   border-style: solid;
-  border-bottom-color: black;
+  border-bottom-color: #B56357;
   border-bottom-width: 5px;
   padding: 0 30px 0 30px;
 }
@@ -164,15 +164,18 @@ p, a {
   margin-top: 15px;
   margin-bottom: 15px;
   background-color: #B56357;
+  border-radius:15px;
 }
 
 #title {
-  font-size: 24px;
+  font-size: 26px;
+  line-height: 1.4em;
+  width: 450px;
 }
 
 #description {
   font-size: 20px;
-  width: 600px;
+  width: 450px;
   text-align: justify;
 }
 

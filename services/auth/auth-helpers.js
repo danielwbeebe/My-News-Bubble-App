@@ -8,7 +8,7 @@ function comparePass(userPassword, databasePassword) {
 
 // redirect
 function loginRedirect(req, res, next) {
-  if (req.user) return res.redirect('/user');
+  if (req.user) return res.redirect('/sources/add');
   return next();
 };
 
