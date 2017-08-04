@@ -22,7 +22,7 @@ Source.create = (source) => {
   `, [source.source, source.title, source.description, source.url, source.urlToImage, source.user_id]);
 };
 
-// find by id
+// find by id - used in add controller
 Source.findById = (id) => {
   return db.oneOrNone(`
   SELECT * FROM sources

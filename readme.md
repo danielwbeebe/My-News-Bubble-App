@@ -61,6 +61,10 @@ Here is the code for my sources table in the migrations file, with columns for t
     user_id INT REFERENCES users(id)
     );
 
+### Acknowledgements
+
+Thanks to the following for providing their comments along the way: John Bell, Gainor Bostwick, Alex Calleia, J Silverstein, and Phil Zak.
+
 ## Opportunities for Future Growth
 
 In terms of future edits, I would like to allow the user to select several news sources to display in the view, and remove buttons for any news sources already selected in order to prevent a user from accidentally selecting the same news source twice.
