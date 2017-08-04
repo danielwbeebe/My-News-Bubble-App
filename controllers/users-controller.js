@@ -5,7 +5,6 @@ const bcrypt = require('bcryptjs');
 // define usersController as object
 const usersController = {};
 
-
 usersController.index = (req, res) => {
   res.redirect('/sources/add');
 };

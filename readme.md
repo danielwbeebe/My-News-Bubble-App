@@ -14,6 +14,8 @@ The user can always go back to the user's 'bubble' (profile) and remove a news s
 
 The heart of the app is the user's news feed, which will include the top news stories from the user's selected favorite news sources.
 
+The app is deployed at: https://news-bubble.herokuapp.com/
+
 ## Technical Discussion
 
 The app utilizes the following technologies:
@@ -31,7 +33,7 @@ In terms of structure, the app is broken down into 3 parts: (1) login/registrati
 
 ### Sample Code
 
-Here is the code fro the views/sources/sources-index.ejs file - used to display the top news articel from the selected news source.
+Here is the code for the views/sources/sources-index.ejs file - used to display the top news articel from the selected news source:
 
     <% for (let source of data) { %>
 
@@ -48,6 +50,20 @@ Here is the code fro the views/sources/sources-index.ejs file - used to display 
 
     <% } %>
   </div>
+
+
+Here is the code for my sources table in the migrations file, with columns for the id, data retrieved by the API call, and the user's id:
+
+    CREATE TABLE IF NOT EXISTS sources
+    (
+    id SERIAL PRIMARY KEY,
+    source VARCHAR(255),
+    title TEXT,
+    description TEXT,
+    url TEXT,
+    urlToImage TEXT,
+    user_id INT REFERENCES users(id)
+    );
 
 ## Opportunities for Future Growth
 
