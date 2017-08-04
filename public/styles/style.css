@@ -78,7 +78,8 @@ body {
 }
 
 #remove-button {
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: 700;
   background-color: white;
   padding: 10px 10px 10px 10px;
   border-radius:15px;
@@ -110,7 +111,7 @@ footer {
   background-color: black;
   font-family: Mallory, sans-serif;
   color: white;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: .08em;
   font-weight: 500;
   bottom: 0px;
