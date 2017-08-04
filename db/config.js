@@ -13,7 +13,7 @@ let db;
 // Setting up database and port 5432
 function setDatabase() {
   if (process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) {
-    return pgp({
+    db = pgp({
       database: 'news_bubble_dev',
       port: 5432,
       host: 'localhost',
