@@ -14,14 +14,14 @@ body {
   height: 100px;
   background-size: cover;
   background-position: center;
-  background-color: #F6F6F6;
+  background-color: #EAE3EA;
   background-blend-mode: multiply;
   font-family: Mallory, sans-serif;
-  color: #2B2B2B;
+  color: #black;
   font-weight: 900;
   min-width: 500px;
   border-style: solid;
-  border-bottom-color: #DE1B1B;
+  border-bottom-color: #0DFFB5;
   border-bottom-width: 5px;
   padding: 0 30px 0 30px;
 }
@@ -99,16 +99,16 @@ main {
   flex-direction: column;
   flex: 1;
   text-align: center;
-  background-color: #2B2B2B;
+  background-color: #B56357;
   color: white;
 }
 
 footer {
   padding: 20px;
   box-sizing: border-box;
-  background-color: black;
+  background-color: #A7B3A5;
   font-family: Mallory, sans-serif;
-  color: white;
+  color: black;
   font-size: 14px;
   letter-spacing: .08em;
   font-weight: 500;
@@ -116,7 +116,7 @@ footer {
   width: 100%;
   vertical-align: text-middle;
   border-style: solid;
-  border-top-color: #DE1B1B;
+  border-top-color: #0DFFB5;
   border-top-width: 5px;
 }
 
@@ -129,7 +129,7 @@ h1 {
 h2 {
   font-size: 40px;
   line-height: 1.6em;
-  color: #E9E581;
+  color: black;
   font-weight: 600;
 }
 
@@ -146,8 +146,8 @@ p, a {
 
 hr {
   height: 2px;
-  background-color: #DE1B1B;
-  border: 1px solid #DE1B1B;
+  background-color: #0DFFB5;
+  border: 1px solid #0DFFB5;
   margin-bottom: 0;
 }
 
@@ -162,15 +162,7 @@ hr {
   margin: auto;
   margin-top: 15px;
   margin-bottom: 15px;
-  background-color: black;
-}
-
-.sources-list {
-  background-color: black;
-}
-
-.add-intro {
-  background-color: black;
+  background-color: #522117;
 }
 
 #title {
