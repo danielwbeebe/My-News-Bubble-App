@@ -33,8 +33,6 @@ In terms of structure, the app is broken down into 3 parts: (1) login/registrati
 
 Here is the code fro the views/sources/sources-index.ejs file - used to display the top news articel from the selected news source.
 
-  <h2>Your News Bubble</h2>
-
     <% for (let source of data) { %>
 
       <div class="news-articles">
