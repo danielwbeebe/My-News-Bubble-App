@@ -157,8 +157,7 @@ p, a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
-  width: 625px;
+  width: 700px;
   flex-basis: auto;
   margin: auto;
   margin-top: 15px;
@@ -170,17 +169,17 @@ p, a {
 #title {
   font-size: 26px;
   line-height: 1.4em;
-  width: 450px;
+  width: 550px;
 }
 
 #description {
   font-size: 20px;
-  width: 450px;
+  width: 550px;
   text-align: justify;
 }
 
 img {
-  max-width: 450px;
+  max-width: 550px;
   height: auto;
 }
 
@@ -199,6 +198,11 @@ img {
     max-width: 500px;
   }
 
+  #title {
+  font-size: 24px;
+  width: 400px;
+  }
+
   #description {
     max-width: 400px;
   }
@@ -211,7 +215,7 @@ img {
   .nav-button {
     padding: 5px 5px 5px 5px;
     margin: 0 5px 0 5px;
-    font-size: 12px;
+    font-size: 14px;
     border:1px solid;
     border-radius:15px;
   }
