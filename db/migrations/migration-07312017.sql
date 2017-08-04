@@ -1,4 +1,4 @@
-\c news_bubble_dev;
+-- \c news_bubble_dev;
 
 CREATE TABLE IF NOT EXISTS users
 (
