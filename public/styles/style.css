@@ -14,7 +14,7 @@ body {
   height: 100px;
   background-size: cover;
   background-position: center;
-  background-color: #EAE3EA;
+  background-color: white;
   background-blend-mode: multiply;
   font-family: Mallory, sans-serif;
   color: #black;
@@ -41,7 +41,8 @@ body {
 }
 
 .nav-button:hover {
-  background-color: #A7B3A5;
+  background-color: #B56357;
+  color: white;
 }
 
 .welcome {

@@ -2,11 +2,16 @@
 
 <% include ../partials/boilerplate %>
 
+<div class='app-header'>
+  <h1>News Bubble</h1><br>
+</div>
+<main>
+
 <div class="login-buttons">
 <form method='POST' action='/auth/login'>
-  <input class="news-button" name='username' type='text' placeholder='username' required value=""/>
-  <input class="news-button" name='password' type='password' placeholder='password' required value="" />
-  <input class="news-button" type='submit' value='Log in!' />
+  <input class="news-add-button" name='username' type='text' placeholder='username' required value=""/>
+  <input class="news-add-button" name='password' type='password' placeholder='password' required value="" />
+  <input class="news-add-button" type='submit' value='Log in!' />
 </form>
 </div>
 

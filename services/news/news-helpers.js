@@ -17,10 +17,6 @@ function getNewsData(req, res, next) {
     res.locals.description = jsonRes.articles[0].description
     res.locals.url = jsonRes.articles[0].url
     res.locals.urlToImage = jsonRes.articles[0].urlToImage
-    console.log('title'+jsonRes.title);
-    console.log(jsonRes.description);
-    console.log(jsonRes.url);
-    console.log(jsonRes.articles[0].urlToImage);
     next()
   }).catch(err => {
     console.log(err);

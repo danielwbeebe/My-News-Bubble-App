@@ -2,12 +2,12 @@
 
 <% include ../partials/boilerplate %>
 
-<div class="sources-list">
+<div class='app-header'>
+  <h1>News Bubble</h1><br>
+</div>
+<main>
+
   <h2>Your News Bubble</h2>
-    <% for (let source of data) { %>
-       <%= source.source %><br>
-    <% } %>
-  </div>
 
     <% for (let source of data) { %>
 
@@ -16,7 +16,7 @@
           <div class="article" id="title"><%= source.title %></div><br>
           <div class="article" id="urlToImage"><img src="<%= source.urltoimage %>"></div>
           <div class="article" id="description"><%= source.description %></div><br>
-          <div class="article" id="url"><a href="<%= source.url %>">Read the whole article</a></div><br>
+          <div class="article" id="url"><a href="<%= source.url %>" target="_blank">Read the whole article</a></div><br>
           <form method='POST' action='/sources/<%= source.id %>?_method=DELETE'>
           <input id="remove-button" type='submit' value='DONE / REMOVE' />
           </form>
@@ -24,5 +24,7 @@
 
     <% } %>
   </div>
+
+<!-- <a class="nav-button" href='/sources/add/'>Update Bubble</a> -->
 
 <% include ../partials/end %>

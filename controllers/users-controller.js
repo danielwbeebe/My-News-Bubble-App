@@ -7,7 +7,7 @@ const usersController = {};
 
 
 usersController.index = (req, res) => {
-  res.redirect('/sources');
+  res.redirect('/sources/add');
 };
 
 // create users controller
