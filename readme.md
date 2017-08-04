@@ -1,8 +1,8 @@
 # 'My News Bubble' App
 
-<img src="images/menu-image.JPG">
+<img src="images/menu-image.png">
 
-<img src="images/article-image.JPG">
+<img src="images/article-image.png">
 
 ## What is 'My News Bubble'?
 
@@ -51,14 +51,6 @@ Here is the code fro the views/sources/sources-index.ejs file - used to display 
     <% } %>
   </div>
 
-## The Making of 'My News Bubble' App
-
-[TO BE ADDED]
-
-### From Concept to App
-
-[TO BE ADDED]
-
 ## Opportunities for Future Growth
 
-[TO BE ADDED]
+In terms of future edits, I would like to allow the user to select several news sources to display in the view, and remove buttons for any news sources already selected in order to prevent a user from accidentally selecting the same news source twice.
