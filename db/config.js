@@ -8,7 +8,8 @@ const options = {
 // requiring pg-promise
 const pgp = require('pg-promise')(options);
 
-let db;
+// Defining contant variable db for database
+const db = setDatabase();
 
 // Setting up database and port 5432
 function setDatabase() {
@@ -22,9 +23,6 @@ function setDatabase() {
     return pgp(process.env.DATABASE_URL);
   }
 };
-
-// Defining contant variable db for database
-const db = setDatabase();
 
 // Exporting db module
 module.exports = db;
