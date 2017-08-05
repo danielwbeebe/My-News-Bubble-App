@@ -127,7 +127,7 @@ footer {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 45px;
   line-height: 1.2em;
   font-weight: 900;
 }
@@ -188,6 +188,7 @@ img {
   height: auto;
 }
 
+/*adaptive design for smaller browser widths and ipads*/
 @media (max-width: 800px) {
 
   main {
@@ -227,6 +228,50 @@ img {
 
   footer {
     min-width: 600px;
+    padding: 0px;
+  }
+}
+
+/*adaptive design for phones*/
+@media (max-width: 500px) {
+
+  main {
+    min-width: 400px;
+  }
+
+  .app-header {
+    min-width: 400px;
+    padding: 0px;
+  }
+
+  .news-articles {
+    max-width: 350px;
+  }
+
+  #title {
+  font-size: 20px;
+  width: 325px;
+  }
+
+  #description {
+    max-width: 325px;
+  }
+
+  img {
+    max-width: 325px;
+    height: auto;
+  }
+
+  .nav-button {
+    padding: 5px 5px 5px 5px;
+    margin: 0 5px 0 5px;
+    font-size: 12px;
+    border:1px solid;
+    border-radius:15px;
+  }
+
+  footer {
+    min-width: 400px;
     padding: 0px;
   }
 }
