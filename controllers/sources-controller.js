@@ -56,7 +56,7 @@ sourcesController.create = (req, res) => {
 sourcesController.delete = (req, res) => {
   Source.destroy(req.params.id)
     .then(() => {
-      res.redirect('/sources/add');
+      res.redirect('/sources/index');
     }).catch(err => {
     console.log(err);
     res.status(500).json({ err });

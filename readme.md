@@ -63,7 +63,7 @@ Here is the code for my sources table in the migrations file, with columns for t
 
 ### Acknowledgements
 
-Thanks to the following for providing their comments along the way: John Bell, Gainor Bostwick, Alex Calleia, J Silverstein, and Phil Zak.
+Thanks to the following for providing their comments along the way: John Bell, Gainor Bostwick, Alex Calleia, Ramsey Nasser, J Silverstein, and Phil Zak.
 
 ## Opportunities for Future Growth
 
