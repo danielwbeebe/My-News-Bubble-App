@@ -18,19 +18,18 @@ sourcesController.index = (req, res) => {
     });
 };
 
-// controller that brings user to the add view
-// sourcesController.add = (req, res) => {
-
-//   Source.findById(req.params.id)
-//     .then(source => {
-//       res.render('sources/sources-add', {
-//         source: source,
-//       })
-//     }).catch(err => {
-//     console.log(err);
-//     res.status(500).json({ err });
-//   });
-// }
+// controller that brings user to the add view after logging in
+sourcesController.add = (req, res) => {
+  Source.findById(req.params.id)
+    .then(source => {
+      res.render('sources/sources-add', {
+        source: source,
+      })
+    }).catch(err => {
+    console.log(err);
+    res.status(500).json({ err });
+  });
+}
 
 // controller to create new row in table
 sourcesController.create = (req, res) => {
