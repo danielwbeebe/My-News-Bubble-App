@@ -6,9 +6,11 @@
 
 ## What is 'My News Bubble'?
 
-'My News Bubble' is an app in which users can register and create a unqiue profile and then select from a menu of news sources to read the top news story from that source.
+'My News Bubble' is an app in which users can register and create a unqiue selection of favorite news sources.
 
-When a user logs in, the app lists over a dozen major news sources to choose from. The user simply has to click a button to add the news source to that users 'bubble' and then read the title and summary of the top story from the article.  A photo from the article will also appear, as well as a link to the original news source.
+When a user logs in, the app lists over a dozen major news sources to choose from. The user simply has to click a button to add the news source to that user's 'bubble'. The user is then redirected to the bubble and can read the article; or the user can navigate back to the menu of source options and continue adding news sources.
+
+After the user has read an article, the user can remove a news article by clicking a button beneath the article.
 
 The app is deployed at: https://news-bubble.herokuapp.com/
 
@@ -21,7 +23,7 @@ The app utilizes the following technologies:
 * JavaScript (functions for models, controllers, routes, and config file)
 * SQL (migration file, communicate with database with tables for registered users and news sources selected by users)
 * Express.js (for the web app framework)
-* API Call (retreieve news data to display)
+* API Call (retrieve news data to display)
 
 ### Notes on App Structure
 
