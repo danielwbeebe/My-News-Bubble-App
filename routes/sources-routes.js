@@ -11,7 +11,7 @@ sourcesRoutes.get('/', authHelpers.loginRequired, sourcesController.index);
 sourcesRoutes.post('/', authHelpers.loginRequired, newsHelpers.getNewsData, sourcesController.create);
 
 // route for add view
-sourcesRoutes.get('/add', authHelpers.loginRequired, sourcesController.add);
+// sourcesRoutes.get('/add', authHelpers.loginRequired, sourcesController.add);
 
 // routes for specific items
 sourcesRoutes.get('/:id', authHelpers.loginRequired, sourcesController.index);
