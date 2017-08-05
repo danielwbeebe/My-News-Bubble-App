@@ -3,14 +3,15 @@
 <% include ../partials/boilerplate %>
 
 <div class='app-header'>
-  <h1>News Bubble</h1><br>
+  <h1>My News Bubble App</h1><br>
     <div class="nav-buttons">
-     <a class="nav-button" href='/sources/add/'>Add Source</a>
+     <a class="nav-button" href='/sources/add/'>Add News Source</a>
+     <a class="nav-button" href='/auth/logout/'>Logout</a>
     </div>
 </div>
 <main>
 
-  <h2>Your News Bubble</h2>
+  <h2>Inside The News Bubble</h2>
 
     <% for (let source of data) { %>
 
@@ -21,7 +22,7 @@
           <div class="article" id="description"><%= source.description %></div><br>
           <div class="article" id="url"><a href="<%= source.url %>" target="_blank">Read the whole article</a></div><br>
           <form method='POST' action='/sources/<%= source.id %>?_method=DELETE'>
-          <input id="remove-button" type='submit' value='DONE / DELETE' />
+          <input id="remove-button" type='submit' value='DONE WITH ARTICLE / DELETE' />
           </form>
       </div>
 
