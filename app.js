@@ -14,8 +14,6 @@ const passport = require('passport');
 // Initializing the 'To-Do' App
 const app = express();
 
-
-
 // Middlewares
 app.use(logger('dev'));
 app.use(bodyParser.json());

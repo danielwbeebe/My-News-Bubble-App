@@ -5,7 +5,7 @@ require('isomorphic-fetch');
 // defining sources controller as object
 const sourcesController = {};
 
-// index
+// index - shows page with the news articles
 sourcesController.index = (req, res) => {
   Source.findAll(req.user.id)
     .then(sources => {
@@ -19,23 +19,23 @@ sourcesController.index = (req, res) => {
 };
 
 // controller that brings user to the add view
-sourcesController.add = (req, res) => {
+// sourcesController.add = (req, res) => {
 
-  Source.findById(req.params.id)
-    .then(source => {
-      res.render('sources/sources-add', {
-        source: source,
-      })
-    }).catch(err => {
-    console.log(err);
-    res.status(500).json({ err });
-  });
-}
+//   Source.findById(req.params.id)
+//     .then(source => {
+//       res.render('sources/sources-add', {
+//         source: source,
+//       })
+//     }).catch(err => {
+//     console.log(err);
+//     res.status(500).json({ err });
+//   });
+// }
 
 // controller to create new row in table
 sourcesController.create = (req, res) => {
 
-  // getting news
+  // getting news from API - call made in news-helpers.js
     Source.create({
     source: req.body.newsSource,
     title: res.locals.title,
@@ -52,7 +52,7 @@ sourcesController.create = (req, res) => {
   });
 };
 
-// delete
+// delete - keeps user on the index page with news articles
 sourcesController.delete = (req, res) => {
   Source.destroy(req.params.id)
     .then(() => {
