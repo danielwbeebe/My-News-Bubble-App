@@ -31,7 +31,7 @@ In terms of structure, the app is broken down into 3 parts: (1) login/registrati
 
 ### Sample Code
 
-Here is the code for the views/sources/sources-index.ejs file - used to display the top news articel from the selected news source:
+Here is the code for the views/sources/sources-index.ejs file - used to display the top news article(s) from the selected news source(s):
 
     <% for (let source of data) { %>
 
@@ -69,4 +69,4 @@ Thanks to the following for providing their comments along the way: John Bell, G
 
 ## Opportunities for Future Growth
 
-In terms of future edits, I would like to allow the user to select several news sources to display in the view, and remove buttons for any news sources already selected in order to prevent a user from accidentally selecting the same news source twice.
+In terms of future edits, I would like to allow the user to select several news sources to display in the view while, at the same time, removing buttons for any news sources already selected in order to prevent a user from accidentally selecting the same news source twice.
