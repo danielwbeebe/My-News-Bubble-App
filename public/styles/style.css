@@ -126,7 +126,7 @@ footer {
   float: right;
 }
 
-a .links:hover {
+.links a:hover {
   color: #B56357;
 }
 
@@ -156,7 +156,7 @@ h4 {
 }
 
 p, a {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.4em;
   color: white;
 }
@@ -187,10 +187,6 @@ p, a {
   line-height: 1.7em;
   width: 550px;
   text-align: justify;
-}
-
-a #url {
-  font-size: 24px;
 }
 
 img {
@@ -225,10 +221,6 @@ img {
     line-height: 1.6em;
   }
 
-  a #url {
-  font-size: 20px;
-  }
-
   img {
     max-width: 400px;
     height: auto;
@@ -246,6 +238,11 @@ img {
     min-width: 600px;
     padding: 0px;
   }
+
+  p, a {
+  font-size: 22px;
+  }
+
 }
 
 /*adaptive design for phones*/
@@ -275,10 +272,6 @@ img {
     line-height: 1.5em;
   }
 
-  a #url {
-    font-size: 20px;
-  }
-
   img {
     max-width: 325px;
     height: auto;
@@ -296,4 +289,9 @@ img {
     min-width: 400px;
     padding: 0px;
   }
+
+  p, a {
+  font-size: 20px;
+  }
+
 }
