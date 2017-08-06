@@ -1,3 +1,5 @@
+// Thanks and credit to J Silverstein for lessons on express auth
+
 // require bcrypt
 const bcrypt = require('bcryptjs');
 

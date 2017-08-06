@@ -1,3 +1,5 @@
+// Thanks and credit to J Silverstein for lessons on express auth
+
 // require express
 const express = require('express');
 const authRouter = express.Router();

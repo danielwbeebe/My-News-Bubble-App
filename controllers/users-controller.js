@@ -1,3 +1,5 @@
+// Thanks and credit to J Silverstein for lessons on express auth
+
 // require models/user and bcrypt package
 const User = require('../models/user');
 const bcrypt = require('bcryptjs');
