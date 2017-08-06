@@ -50,7 +50,7 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-// import routes and tell app to use them
+// import sources, auth, and user routes and tell app to use them
 const sourcesRoutes = require('./routes/sources-routes');
 app.use('/sources', sourcesRoutes);
 const authRoutes = require('./routes/auth-routes');

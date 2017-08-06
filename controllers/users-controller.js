@@ -6,11 +6,12 @@ const bcrypt = require('bcryptjs');
 const usersController = {};
 
 // if user is logged in, /user sends to user to sources/add page
+// currently no need for separate user profile page
 usersController.index = (req, res) => {
   res.redirect('/sources/add');
 };
 
-// create users controller
+// creating the user, based on username, email, password
 usersController.create = (req, res, next) => {
   const salt = bcrypt.genSaltSync();
   const hash = bcrypt.hashSync(req.body.password, salt);
