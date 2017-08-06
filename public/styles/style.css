@@ -172,15 +172,20 @@ p, a {
 }
 
 #title {
+  font-family: Mallory, sans-serif;
   font-size: 26px;
   line-height: 1.4em;
   width: 550px;
 }
 
 #description {
-  font-size: 20px;
+  font-size: 24px;
   width: 550px;
   text-align: justify;
+}
+
+#url {
+  font-size: 22px;
 }
 
 img {
@@ -211,6 +216,11 @@ img {
 
   #description {
     max-width: 400px;
+    font-size: 22px;
+  }
+
+  #url {
+  font-size: 20px;
   }
 
   img {
@@ -249,12 +259,17 @@ img {
   }
 
   #title {
-  font-size: 20px;
-  width: 325px;
+    font-size: 20px;
+    width: 325px;
   }
 
   #description {
     max-width: 325px;
+    font-size: 20px;
+  }
+
+  #url {
+    font-size: 20px;
   }
 
   img {

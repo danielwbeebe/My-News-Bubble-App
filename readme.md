@@ -19,7 +19,7 @@ The app is deployed at: https://news-bubble.herokuapp.com/
 The app utilizes the following technologies:
 
 * HTML/EJS (general framework for the page views)
-* CSS (style, formatting, adaptive design for web browser width)
+* CSS (style, formatting, adaptive design for web browser widths with break points at 800px and 500px)
 * JavaScript (functions for models, controllers, routes, and config file)
 * SQL (migration file, communicate with database with tables for registered users and news sources selected by users)
 * Express.js (for the web app framework)

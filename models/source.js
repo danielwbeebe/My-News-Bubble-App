@@ -4,7 +4,7 @@ const db = require('../db/config');
 // define source as object
 const Source = {};
 
-// find all
+// find all - finds all articles associated with a specific user
 Source.findAll = (id) => {
   return db.query(`
     SELECT * FROM sources
@@ -30,7 +30,7 @@ Source.findById = (id) => {
   `, [id]);
 };
 
-// destroy
+// destroy - delete specific article row from table sources in db
 Source.destroy = (id) => {
   return db.none(`
     DELETE FROM sources

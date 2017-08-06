@@ -1,4 +1,4 @@
-<!-- main list of selected news sources -->
+<!-- main display of selected news articles -->
 
 <% include ../partials/boilerplate %>
 
@@ -12,6 +12,8 @@
 <main>
 
   <h2>Inside The News Bubble</h2>
+
+<!-- // loop to create  display of the user's selected news articles -->
 
     <% for (let source of data) { %>
 
@@ -28,7 +30,5 @@
 
     <% } %>
   </div>
-
-<!-- <a class="nav-button" href='/sources/add/'>Update Bubble</a> -->
 
 <% include ../partials/end %>
