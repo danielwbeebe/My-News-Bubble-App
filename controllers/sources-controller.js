@@ -31,7 +31,7 @@ sourcesController.add = (req, res) => {
   });
 }
 
-// controller to create new row in table
+// controller to add new article - new row in db table in models/source create method
 sourcesController.create = (req, res) => {
 
   // getting news from API - call made in news-helpers.js

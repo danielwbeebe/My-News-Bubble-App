@@ -12,7 +12,7 @@ Source.findAll = (id) => {
   `, [id]);
 };
 
-// create
+// create - inserts article into db sources table from API call made in services/news/news-helpers
 Source.create = (source) => {
   return db.one(`
     INSERT INTO sources
