@@ -126,7 +126,7 @@ footer {
   float: right;
 }
 
-.links:hover {
+a .links:hover {
   color: #B56357;
 }
 
@@ -189,7 +189,7 @@ p, a {
   text-align: justify;
 }
 
-#url {
+a #url {
   font-size: 24px;
 }
 
@@ -225,7 +225,7 @@ img {
     line-height: 1.6em;
   }
 
-  #url {
+  a #url {
   font-size: 20px;
   }
 
@@ -275,7 +275,7 @@ img {
     line-height: 1.5em;
   }
 
-  #url {
+  a #url {
     font-size: 20px;
   }
 
