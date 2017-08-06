@@ -127,7 +127,7 @@ footer {
 }
 
 .links:hover {
-  background-color: #B56357;
+  color: #B56357;
 }
 
 h1 {
@@ -184,6 +184,7 @@ p, a {
 
 #description {
   font-size: 28px;
+  line-height: 1.7em;
   width: 550px;
   text-align: justify;
 }
@@ -221,6 +222,7 @@ img {
   #description {
     max-width: 400px;
     font-size: 22px;
+    line-height: 1.6em;
   }
 
   #url {
@@ -270,6 +272,7 @@ img {
   #description {
     max-width: 325px;
     font-size: 20px;
+    line-height: 1.5em;
   }
 
   #url {
