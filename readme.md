@@ -31,7 +31,7 @@ In terms of structure, the app is broken down into 3 parts: (1) login/registrati
 
 ### Sample Code
 
-The following code snippets show the steps in the code from the click of a button calling for a news article to its display.
+The following code snippets provide an overview of the steps in the code from the click of a button calling for a news article to its display.
 
 1 - VIEW: Here is code for one of the buttons from the views/sources-add view, used to begin the call for a news article:
 
@@ -41,32 +41,7 @@ The following code snippets show the steps in the code from the click of a butto
     </form>
 
 
-2 - ROUTE: Here is the code from routes/sources-routes file for the post method, requiring auth, getNewsData, and create method:
-
-    sourcesRoutes.post('/', authHelpers.loginRequired, newsHelpers.getNewsData, sourcesController.create);
-
-
-3 - CONTROLLER: Here is code from controllers/sources-controller for the create method:
-
-    sourcesController.create = (req, res) => {
-        Source.create({
-        source: req.body.newsSource,
-        title: res.locals.title,
-        description: res.locals.description,
-        url: res.locals.url,
-        urlToImage: res.locals.urlToImage,
-        user_id: req.user.id
-    }, console.log(res.locals.urlToImage)).then(source => {
-        console.log(source);
-        res.redirect('/sources/sources-add');
-    }).catch(err => {
-        console.log(err);
-        res.status(500).json({ err });
-    });
-    };
-
-
-4 - HELPER: Here is the code from the services/news/news-helpers file with the getNewsData function to make the API call for the news article:
+2 - HELPER: Here is the code from the services/news/news-helpers file with the getNewsData function to make the API call for the news article:
 
     function getNewsData(req, res, next) {
         let newsSource = req.body.newsSource;
@@ -86,7 +61,7 @@ The following code snippets show the steps in the code from the click of a butto
     };
 
 
-5 - MODELS: Here is code from the models/source file, showing the insertion of the data into the database table sources:
+3 - MODELS: Here is code from the models/source file, showing the insertion of the data into the database table sources:
 
     Source.create = (source) => {
         return db.one(`
@@ -98,7 +73,7 @@ The following code snippets show the steps in the code from the click of a butto
     };
 
 
-6 - CONTROLLER: Here is the code from the controllers/sources-controller file with the index method, rendering data to the sources-index vew:
+4 - CONTROLLER: Here is the code from the controllers/sources-controller file with the index method, rendering data to the sources-index vew:
 
     sourcesController.index = (req, res) => {
         Source.findAll(req.user.id)
@@ -113,7 +88,7 @@ The following code snippets show the steps in the code from the click of a butto
     };
 
 
-7 - VIEW: Here is the code for the views/sources/sources-index.ejs file - used to display the top news article(s) from the selected news source(s):
+5 - VIEW: Here is the code for the views/sources/sources-index.ejs file - used to display the top news article(s) from the selected news source(s):
 
     <% for (let source of data) { %>
 
