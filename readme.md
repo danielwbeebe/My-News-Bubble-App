@@ -31,7 +31,89 @@ In terms of structure, the app is broken down into 3 parts: (1) login/registrati
 
 ### Sample Code
 
-Here is the code for the views/sources/sources-index.ejs file - used to display the top news article(s) from the selected news source(s):
+The following code snippets show the steps in the code from the click of a button calling for a news article to its display.
+
+1 - VIEW: Here is code for one of the buttons from the views/sources-add view, used to begin the call for a news article:
+
+    <form class="news-buttons" method='POST' action='/sources'>
+        <button class="news-add-button" id="al-jazeera-english" type="submit" name="newsSource" value="al-jazeera-english">Al Jazeera</button>
+        ... [code for other buttons ]
+    </form>
+
+
+2 - ROUTE: Here is the code from routes/sources-routes file for the post method, requiring auth, getNewsData, and create method:
+
+    sourcesRoutes.post('/', authHelpers.loginRequired, newsHelpers.getNewsData, sourcesController.create);
+
+
+3 - CONTROLLER: Here is code from controllers/sources-controller for the create method:
+
+    sourcesController.create = (req, res) => {
+        Source.create({
+        source: req.body.newsSource,
+        title: res.locals.title,
+        description: res.locals.description,
+        url: res.locals.url,
+        urlToImage: res.locals.urlToImage,
+        user_id: req.user.id
+    }, console.log(res.locals.urlToImage)).then(source => {
+        console.log(source);
+        res.redirect('/sources/sources-add');
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json({ err });
+    });
+    };
+
+
+4 - HELPER: Here is the code from the services/news/news-helpers file with the getNewsData function to make the API call for the news article:
+
+    function getNewsData(req, res, next) {
+        let newsSource = req.body.newsSource;
+        fetch(`https://newsapi.org/v1/articles?source=${newsSource}&sortBy=top&apiKey=${API_KEY}`)
+        .then(fetchRes => fetchRes.json())
+        .then((jsonRes) => {
+        console.log(newsSource);
+        res.locals.title = jsonRes.articles[0].title
+        res.locals.description = jsonRes.articles[0].description
+        res.locals.url = jsonRes.articles[0].url
+        res.locals.urlToImage = jsonRes.articles[0].urlToImage
+        next()
+        }).catch(err => {
+        console.log(err);
+        next()
+        });
+    };
+
+
+5 - MODELS: Here is code from the models/source file, showing the insertion of the data into the database table sources:
+
+    Source.create = (source) => {
+        return db.one(`
+        INSERT INTO sources
+        (source, title, description, url, urlToImage, user_id)
+        VALUES ($1, $2, $3, $4, $5, $6)
+        RETURNING *
+        `, [source.source, source.title, source.description, source.url, source.urlToImage, source.user_id]);
+    };
+
+
+6 - CONTROLLER: Here is the code from the controllers/sources-controller file with the index method, rendering data to the sources-index vew:
+
+    sourcesController.index = (req, res) => {
+        Source.findAll(req.user.id)
+        .then(sources => {
+        res.render('sources/sources-index', {
+            data: sources,
+        });
+        }).catch(err => {
+        console.log(err);
+        res.status(500).json({ err });
+        });
+    };
+
+
+7 - VIEW: Here is the code for the views/sources/sources-index.ejs file - used to display the top news article(s) from the selected news source(s):
 
     <% for (let source of data) { %>
 
@@ -49,19 +131,6 @@ Here is the code for the views/sources/sources-index.ejs file - used to display 
     <% } %>
   </div>
 
-
-Here is the code for my sources table in the migrations file, with columns for the id, data retrieved by the API call, and the user's id:
-
-    CREATE TABLE IF NOT EXISTS sources
-    (
-    id SERIAL PRIMARY KEY,
-    source VARCHAR(255),
-    title TEXT,
-    description TEXT,
-    url TEXT,
-    urlToImage TEXT,
-    user_id INT REFERENCES users(id)
-    );
 
 ### Acknowledgements
 
